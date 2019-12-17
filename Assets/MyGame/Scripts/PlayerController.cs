@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private const string jumping = "Jump";
+    private const string ground = "Ground";
+    private const string obstacle = "Obstacle";
+    private const string santaDeath = "SantaDeath";
+
     Rigidbody2D rb;
     Animator anim;
     [SerializeField] float jumpForce;
@@ -36,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = Vector2.up * jumpForce;
 
-        anim.SetTrigger("Jump");
+        anim.SetTrigger(jumping);
 
         GameManager.instance.IncrementScore();
         Debug.Log("DeleteMe");
@@ -48,17 +53,17 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)   {
-        if(collision.gameObject.tag == "Ground")
+        if(collision.gameObject.tag == ground)
         {
             grounded = true;}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Obstacle"){
+        if(collision.gameObject.tag == obstacle){
             GameManager.instance.GameOver();
             Destroy(collision.gameObject);
-            anim.Play("SantaDeath");
+            anim.Play(santaDeath);
             gameOver = SetGameOverTrue();
         }
     }
