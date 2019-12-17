@@ -8,6 +8,7 @@ public class ObstacleSpawner : MonoBehaviour
     public GameObject[] obstacles;
     public bool gameOver = false;
     public float minSpawnTime, maxSpawnTime;
+    public const string spawning = "Spawn";
 
 
     private void Awake()
@@ -21,7 +22,7 @@ public class ObstacleSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("Spawn");
+        StartCoroutine(spawning);
     }
 
     IEnumerator Spawn()
