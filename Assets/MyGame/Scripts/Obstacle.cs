@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
+    private const float obsDistance = 15f;
 Rigidbody2D rb;
 [SerializeField] private float MoveSpeed;
 
@@ -16,12 +17,12 @@ private void Awake()
 void Update()
 {
     //if obstacle's position x is < -15f it will be destroyed
-    if(transform.position.x < -15f)
+    if(transform.position.x < -obsDistance)
     {
         Destroy(gameObject);
 }
         //if obstacle's position x is < -15f it will be destroyed
-        if (transform.position.x > 15f)
+        if (transform.position.x > obsDistance)
         {
             Destroy(gameObject);
         }
