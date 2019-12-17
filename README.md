@@ -7,15 +7,16 @@ Refactoring ist der strukturierte Vorgang des Optimierens und Ausbessern von Cod
 ## Die Vorteile/Nachteile von Refactoring
 ### Vorteile: 
 - Besser lesbar für Aussenstehende
-- Redundanz wird vermieden
+- Die Erleichterung der Weiterentwicklung der Software.
 - Bessere Testbarkeit
-- Code leichter erweiterbar
+- Die Steigerung der Performance der Software.
 - Übersichtlicher
 
 ### Nachteile:
-- Neue unerwartete Fehler können auftreten
-- Testaufwand
-- Abstimmungsaufwand zwischen Programmierern
+- Die versehentliche Implementierung von ungewollten Änderungen oder Fehlern. Auch scheinbar kleine Änderungen können große Wirkungen entfalten. Unit-Tests können dieses Risiko senken.
+- Der Aufwand könnte größer sein als ursprünglich erwartet bzw. eingeplant.
+- Der Abstimmungsaufwand zwischen Entwicklern und/oder Softwarearchitekten könnte umfangreicher als erwartet sein.
+- Der Kunde merkt nichts von dem Refactoring, da sich für ihn alles unverändert anfühlt und er keine neuen Features erhält.
 
 ## Was sind die Refactoring-Schritte?
 1. Testcase definieren
@@ -23,7 +24,7 @@ Refactoring ist der strukturierte Vorgang des Optimierens und Ausbessern von Cod
 3. Einen „Code Smell“ ausbessern
 4. Testen ob das Programm noch alle zuvor bekannten Funktionen erfüllt
 5. Commit
-6. Wiederhole Schritt 3, 4 ,5 bis alle Smells ausgebessert sind
+6. alles wiederholen bis alle Smells ausgebessert sind
 7. Projekt pushen 
 
 ## Prinzipien von gutem Code:
@@ -39,7 +40,9 @@ SoC - Separation of Concerns
 Der Code soll zusammengehörige Funktionen in diverse Abschnitte gliedern.
 
 ## Was versteht man unter Code Smell?
-Der Begriff beschreibt funktionalen Code, welcher jedoch keine gute Strukturierung aufweist und oft unnötig komplex ist. 
+Schlecht strukturierter Quellcode
+
+Code-Smell bezeichnet funktionierenden, aber schlecht struktuierten Quellcode. Der Begriff geht auf das Buch „Refactoring – Improving the Design of Existing Code“ von Martin Fowler und eine in diesem Buch verwendete Metapher von Kent Beck, dem Erfinder des Extreme Programmings, zurück. „If it stinks, change it“
 
 ## 10 Code Smells Beispiele
 
