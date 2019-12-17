@@ -25,15 +25,10 @@ void Update()
         {
             Destroy(gameObject);
         }
-
     }
-
-
 
 private void FixedUpdate()
 {
-
     rb.velocity = Vector2.left * MoveSpeed;
-
 }
 }
