@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour{
-    public void Play(){
-        SceneManager.LoadScene("MainScene");
+    public const string mainScene = "MainScene";
+    public void Play()
+    {
+        SceneManager.LoadScene(mainScene);
     }
 
     public void Exit()
