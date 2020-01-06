@@ -70,7 +70,7 @@ public void SetResult()
 }
 ```
 ### 3. Zu komplexe/verwirrende Namensgebung
-Um Zeit und Verwirrung zu sparen sollten die vergebenen Namen immer Sinn ergeben und nach einem einheitlichen System ausgewählt sein. 
+Die Namen sollten immer Sinn ergeben um Verwirrung und vor allem Zeit zu sparen und nach einem einheitlichen System ausgewählt sein. 
 ```c#
 public void _RstTheRslt1(){}
 public void retTheresult(){}
